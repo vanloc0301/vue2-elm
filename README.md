@@ -1,4 +1,14 @@
-# 前言
+# Lời nói đầu
+
+Những người mới bắt đầu với Vue luôn tìm kiếm những ví dụ.
+Tiếc thay, hầu hết trong số đó khá đơn giản.
+
+Chúng tôi phải dùng Vue trong công việc hằng ngày, 1 ứng dụng mua sắm gồm giỏ hàng, dự án như vậy liên quan đến tiền, vì vậy caanfsuwj chặt chẽ và logic, sự tương tác phức tạp giữa các trang, đăng nhập/đăng ký, thông tin người dùng,.... thường làm cho chúng ta đau đầu.
+Chưa có ai viết dự án ntn, nên nó tốt hơn để tôi viết và mong muốn mã nguồn này sẽ giúp đỡ mọi người.
+
+Những tính năng trong dự án này là rất thực tế, nhưng nhàm chán. Không phải giao diện đẹp, nhnhuwxng thứ khám phá.
+Nó phức tạp, đủ để có 1 nền tảng tốt khi đọc. Và thứ 2, nó có nhiều hình ăn đò ăn nên bạn sẽ không thấy màn chán.
+
 
 初学vue时曾在网上搜索vue的实战项目源码，无奈大部分都是简单的demo，对于深究vue没有太大的帮助，剩下的一些大部分都是像音乐播放器之类的展示型项目，交互没有预期那么复杂。但我们实际在工作中，经常会遇到有购物车的项目，这类项目因为涉及到money，所以对逻辑严谨度要求高，页面之间交互复杂，又会伴随着登陆、注册、用户信息等等，常常会让我们很头疼。既然还没人用vue写过这样的项目，那不如我来写，开源出来对能看到的人也会有帮助。
 
