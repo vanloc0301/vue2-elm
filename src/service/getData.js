@@ -16,7 +16,7 @@ import * as hongbao from './tempdata/hongbao'
 
 
 /**
- * 创建临时数据
+ * Tạo dữ liệu tạm thời
  */
 const setpromise = data => {
 	return new Promise((resolve, reject) => {
@@ -24,11 +24,11 @@ const setpromise = data => {
 	})
 }
 
-//编译环境使用真实数据
+// Môi trường biên dịch sử dụng dữ liệu thực tế
 if (process.env.NODE_ENV == 'development') {
 
 	/**
-	 * 获取首页默认地址
+	 * Lấy địa chỉ trang chủ mặc định
 	 */
 
 	var cityGuess = () => fetch('GET', '/v1/cities', {
@@ -37,7 +37,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取首页热门城市
+	 * Nhận URL trang chủ của thành phố.
 	 */
 
 	var hotcity = () => fetch('GET', '/v1/cities', {
@@ -46,7 +46,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取首页所有城市
+	 * Nhận URL Trang chủ của tất cả thành phố.
 	 */
 
 	var groupcity = () => fetch('GET', '/v1/cities', {
@@ -55,14 +55,14 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取当前所在城市
+	 * Get thành phố hiện tại.
 	 */
 
 	var currentcity = number => fetch('GET', '/v1/cities/' + number, {});
 
 
 	/**
-	 * 获取搜索地址
+	 * Lấy địa chỉ tìm kiếm.
 	 */
 
 	var searchplace = (cityid, value) => fetch('GET', '/v1/pois', {
@@ -73,14 +73,14 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取msite页面地址信息
+	 * Nhận thông tin địa chỉ trang msite.
 	 */
 
 	var msiteAdress = geohash => fetch('GET', '/v2/pois/' + geohash, {});
 
 
 	/**
-	 * 获取msite页面食品分类列表
+	 * Nhận trang msite chuyên mục danh sách thực phẩm.
 	 */
 
 	var msiteFoodTypes = geohash => fetch('GET', '/v2/index_entry', {
@@ -91,7 +91,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取msite商铺列表
+	 * Nhậm m.site cửa hàng.
 	 */
 
 	var shopList = (latitude, longitude, offset, restaurant_category_id = '', restaurant_category_ids = '', order_by = '', delivery_mode = '', support_ids = []) => {
@@ -118,7 +118,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取search页面搜索结果
+	 * Nhận các kết quả tìm kiếm của trang tìm kiếm.
 	 */
 
 	var searchRestaurant = (geohash, keyword) => fetch('GET', '/v4/restaurants', {
@@ -130,7 +130,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取food页面的 category 种类列表
+	 * Lấy được 1 danh sách các loại trong chuyên mục thực phẩm.
 	 */
 
 	var foodCategory = (latitude, longitude) => fetch('GET', '/shopping/v2/restaurant/category', {
@@ -140,7 +140,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取food页面的配送方式
+	 * Nhận được trang giao hàng thức ăn.
 	 */
 
 	var foodDelivery = (latitude, longitude) => fetch('GET', '/shopping/v1/restaurants/delivery_modes', {
@@ -151,7 +151,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取food页面的商家属性活动列表
+	 * Nhận sự kiện kinh doanh thực phẩm, liệt kê các thuộc tính trang.
 	 */
 
 	var foodActivity = (latitude, longitude) => fetch('GET', '/shopping/v1/restaurants/activity_attributes', {
@@ -162,7 +162,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 	/**
-	 * 获取shop页面商铺详情
+	 * Nhận thông tin chi tiết cửa hàng / trang cửa hàng
 	 */
 
 	var shopDetails = (shopid, latitude, longitude) => fetch('GET', '/shopping/restaurant/' + shopid, {
