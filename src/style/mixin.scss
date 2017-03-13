@@ -2,7 +2,7 @@ $blue: #3190e8;
 $bc: #e4e4e4;
 $fc:#fff;
 
-// 背景图片地址和大小
+// URL background image và kích thước
 @mixin bis($url) { 
 	background-image: url($url);
 	background-repeat: no-repeat;
@@ -16,53 +16,56 @@ $fc:#fff;
     -o-border-radius: $radius;
     border-radius: $radius;
 }
-//定位全屏
+// mixin:
+// Phải viết lại thứ gì đó là một việc rất chán, đặc biệt là trong CSS3 rất nhiều tiền tố cho các trình duyệt. 
+// Mixin cho phép gộp nhóm các khi báo trong CSS để sử dụng lại trên website. 
+// Thậm chí có thể truyền giá trị vào mixin để tăng tính linh hoạt
 @mixin allcover{
 	position:absolute;
 	top:0;
 	right:0;
 }
 
-//定位上下左右居中
+// Canh giữa vị trí theo chiều dọc và chiều ngang.
 @mixin center {  
 	position: absolute;
 	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-//定位上下居中
+// Xác định vị trí trung tâm trên dưới.
 @mixin ct {  
 	position: absolute;
 	top: 50%;
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-//定位上下居中
+//Định vị các trung tâm trên và dưới.
 @mixin cl {  
 	position: absolute;
 	left: 50%;
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-//宽高
+//Chiều rộng và chiều cao
 @mixin wh($width, $height){
 	width: $width;
 	height: $height;
 }
 
-//字体大小、行高、字体
+//Cỡ chữ, chiều cao dòng, font.
 @mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
 	font: #{$size}/#{$line-height} $family;
 }
 
-//字体大小，颜色
+//Cỡ chữ, màu sắc
 @mixin sc($size, $color){
 	font-size: $size;
 	color: $color;
 }
 
-//flex 布局和 子元素 对其方式
+// Giao diện và các phần tử con của flex
 @mixin fj($type: space-between){
 	display: flex;
 	justify-content: $type;
