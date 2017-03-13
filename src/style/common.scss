@@ -15,7 +15,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     }
 }
 
-/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+/* Xác định độ rộng thanh cuộn và chiều cao tương ứng, dọc, nền, rộng cuộn kích thước thanh */
 ::-webkit-scrollbar  
 {  
     width: 0px;  
@@ -23,7 +23,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     background-color: #F5F5F5;  
 }  
   
-/*定义滚动条轨道 内阴影+圆角*/  
+/*Định nghĩa thanh cuộn đổ bóng hình tròn*/  
 ::-webkit-scrollbar-track  
 {  
     -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
@@ -31,7 +31,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     background-color: #F5F5F5;  
 }  
   
-/*定义滑块 内阴影+圆角*/  
+/*Định nghĩa đổ bóng tròn hiệu ứng trượt*/  
 ::-webkit-scrollbar-thumb  
 {  
     border-radius: 10px;  
